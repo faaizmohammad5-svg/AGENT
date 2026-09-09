@@ -1,4 +1,10 @@
-app = Flask(__name__)
+from flask import Flask, render_template
+from app.youtube import youtube_bp
+
+
+def create_app():
+
+    app = Flask(__name__)
 
     app.register_blueprint(
         youtube_bp,
