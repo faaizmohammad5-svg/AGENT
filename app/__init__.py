@@ -35,6 +35,7 @@ def html():
 # Health
 @app.route("/health")
 def health():
+    return jsonify({
     "status": "ok",
     "service": "Nova AI Agent"
     })
